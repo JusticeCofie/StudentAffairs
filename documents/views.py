@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .serializers import OutgoingDocumentSerializer, IncomingDocumentSerializer
-from .models import IncomingDocument, OutgoingDocument
+from documents.models import IncomingDocument, OutgoingDocument
 
 class IncomingCreate(generics.CreateAPIView):
     serializer_class = IncomingDocumentSerializer
@@ -8,7 +8,6 @@ class IncomingCreate(generics.CreateAPIView):
     def get_queryset(self):
         queryset = IncomingDocument.objects.all()
         return queryset
-    
     
 
 class IncomingList(generics.ListAPIView):

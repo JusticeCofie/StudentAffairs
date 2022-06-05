@@ -1,5 +1,4 @@
 
-
 from pathlib import Path
 from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,6 +30,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'documents.apps.DocumentsConfig',
     'student_requests.apps.StudentRequestsConfig',
+    'board_meetings.apps.BoardMeetingsConfig',
 
     # third party
     'jsignature',

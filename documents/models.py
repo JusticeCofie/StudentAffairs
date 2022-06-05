@@ -5,7 +5,7 @@ class Record(models.Model):
     received_by = models.CharField(max_length=250, verbose_name='Receipent Name')
     date_received = models.DateTimeField()
     department = models.CharField(max_length=250, verbose_name='From Receiving Department')
-    
+
     class Meta:
         abstract = True
         ordering = ['-date_received',]
@@ -17,6 +17,7 @@ class IncomingDocument(Record):
     )
     sender = models.CharField(max_length=250, verbose_name='From Who')
     department = models.CharField(choices=DEPARTMENT, max_length=13, verbose_name='Department Been Sent To')
+
 
     class Meta:
         verbose_name = 'Incoming Document'
