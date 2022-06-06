@@ -124,5 +124,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 # Custom User
 AUTH_USER_MODEL = 'users.CustomUser'
+
+CSRF_TRUSTED_ORIGINS =[
+
+    "https://justicebrains-justicecofie-studentaffairs-p566wrr9fx6g-8000.githubpreview.dev",
+]
